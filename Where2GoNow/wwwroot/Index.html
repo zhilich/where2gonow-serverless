@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <title>Where2GoNow - Search for attractions on the map.</title>
+        <link rel="stylesheet" type="text/css" href="css/dhtmlx.css"/>
+        <link rel="stylesheet" type="text/css" href="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <style>
+        </style>
+    </head>
+    <body>
+        <div id="loader" class="ui active inverted dimmer">
+            <div class="ui medium text loader"></div>
+        </div>
+        <div id="map"></div>
+        <div id="details">
+            <div class="ui card">
+                <div id="photo-container" class="image">
+                    <img id="photo" src="images/no-image.png" onclick="navigate()" />
+                </div>
+                <div class="content">
+                    <div id="title" class="header" onclick="navigate()"></div>
+                    <div class="meta">
+                        <a id="category"></a>
+                    </div>
+                    <div class="description">
+                        <div class="tripadvisor">TripAdvisor</div>
+                        Information on this screen is provided for search purposes only. Click on the title to navigate to the original source legitimately owned by <i>TripAdvisor, Inc.</i>
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        <div id="rating" class="ui star rating"></div>
+                    </span>
+                    <span>
+                    <i class="user icon"></i>
+                    <span id="reviews">0</span> Reviews
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="filter">
+            <div class="ui card">
+                <div class="content">
+                    <img src="https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/location-24-128.png" height="16" width="16" />
+                    <div class="ui mini icon input" style="margin-bottom: 15px; margin-left: 5px">
+                        <input id="location" type="text" placeholder="My Location" size="36" value="">
+                    </div>
+                    <div style="margin-bottom: 30px">
+                        <i class="wifi icon" style="position: absolute"></i>
+                        <div id="radius" style="margin-left: 24px;" skin="dhx_skyblue" size="237" vertical="false"></div>
+                    </div>
+                    <div style="margin-bottom: 30px">
+                        <i class="thumbs outline up icon" style="position: absolute"></i> 
+                        <div id="popularity" style="margin-left: 24px;" skin="dhx_skyblue" size="237" vertical="false"></div>
+                    </div>
+
+                    <div style="display: inline-block; margin-top: 20px; float: right">
+
+                        <div id="category-dropdown" class="ui floating dropdown labeled icon button mini olive">
+                            <i class="filter icon"></i>
+                            <div class="default text">Category</div>
+                            <div class="menu">
+                                <div class="item" data-value="">
+                                    All Categories
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="ui primary button mini " onclick="initMap()">
+                            <i class="search icon"></i>
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="scripts/dhtmlx.js"></script>    
+        <script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC35THnC72lgQq0IlQtMIsLaBdziDZHBwg&libraries=places"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+            
+#map {
+    height: 100%;
+}
+            
+#details {
+    position: absolute;
+    top: 230px;
+    left: 11px;
+    display: none;
+}
+            
+.tripadvisor {
+    height: 24px;
+    font-weight: bold;
+    background: url('//static.tacdn.com/img2/branding/TA_550x370.png') top left / 36px 24px no-repeat;
+    padding-left: 36px;
+}
+            
+#filter {
+    position: absolute;
+    top: 60px;
+    left: 11px;
+    visibility: hidden;
+}
+            
+#title {
+    cursor: pointer;
+}
+
+#title:hover {
+    color: #1a67a2;
+}
+            
+#photo {
+    cursor: pointer;
+}
+
+#photo-container {
+    max-height: 200px;
+    overflow-y: hidden;
+}
+
+#category-dropdown {
+    position: relative;
+    top: 1px;
+}
