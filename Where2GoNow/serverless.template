@@ -12,7 +12,7 @@
       "Type" : "AWS::Serverless::Function",
       "Properties": {
         "Handler": "Where2GoNow::Where2GoNow.LambdaEntryPoint::FunctionHandlerAsync",
-        "Runtime": "dotnetcore2.0",
+        "Runtime": "dotnetcore2.1",
         "CodeUri": "",
         "MemorySize": 256,
         "Timeout": 30,
@@ -37,7 +37,7 @@
       "Type" : "AWS::Serverless::Function",
       "Properties": {
         "Handler": "Where2GoNow::Where2GoNow.LambdaEntryPoint::GetDefaultDocument",
-        "Runtime": "dotnetcore2.0",
+        "Runtime": "dotnetcore2.1",
         "CodeUri": "",
         "MemorySize": 256,
         "Timeout": 30,
@@ -63,7 +63,7 @@
   "Outputs" : {
     "ApiURL" : {
         "Description" : "API endpoint URL for Prod environment",
-        "Value" : { "Fn::Sub" : "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/" }
+        "Value" : { "Fn::Sub" : "https://www.where2gonow.com/" }
     }
   }
 }
